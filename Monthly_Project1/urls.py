@@ -39,6 +39,7 @@ urlpatterns = [
     path('logout/', user_logout, name='logout'),
     path('subscribe/', subscribe, name='subscribe'),
 
+    path('manager/', include('manager.urls')),
 ]
 
 if settings.DEBUG:

@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "services.apps.ServicesConfig",
     "contact.apps.ContactConfig",
     "pages.apps.PagesConfig",
-    "account.apps.AccountConfig"
+    "account.apps.AccountConfig",
+    "manager.apps.ManagerConfig"
 ]
 
 MIDDLEWARE = [
