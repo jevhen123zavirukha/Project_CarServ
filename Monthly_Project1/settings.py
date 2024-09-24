@@ -22,7 +22,6 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-$9_rdtx1w*t9ayfw%wkyy^!__vcs@-8k$c2nem9zldu5xl1z&='
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 DB_HOST = os.getenv('DB_HOST')
@@ -32,7 +31,7 @@ DB_PORT = os.getenv('DB_PORT')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
@@ -71,8 +70,7 @@ ROOT_URLCONF = 'Monthly_Project1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
