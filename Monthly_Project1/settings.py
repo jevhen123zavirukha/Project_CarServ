@@ -31,7 +31,8 @@ DB_PORT = os.getenv('DB_PORT')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv('DEBUG') == 'True' else False
+# DEBUG = True if os.getenv('DEBUG') == 'True' else False
+DEBUG = True
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
@@ -154,9 +155,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-INTERNAL_IPS = [
-    '127.0.0.1'
-]
 
 CACHES = {
     'default': {
