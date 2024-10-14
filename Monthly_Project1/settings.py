@@ -33,9 +33,7 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
-# DEBUG = True
 
-# ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 ALLOWED_HOSTS = ['*']
 
 # Application definition
