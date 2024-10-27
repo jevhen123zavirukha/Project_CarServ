@@ -13,6 +13,15 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,6 +87,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'contact.context_processors.contacts',
             ],
         },
     },
@@ -94,9 +104,9 @@ DATABASES = {}
 if DEBUG:
     # True Local
     DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': BASE_DIR / 'db.sqlite3',
+        }
 else:
     # False Local
     DATABASES['default'] = {

@@ -37,6 +37,7 @@ class ContactInfo(models.Model):
     address = models.CharField(max_length=100)
     phone = models.CharField(max_length=15)
     email = models.EmailField()
+    work_schedule = models.CharField(max_length=100)
 
     is_visible = models.BooleanField(default=True)
 

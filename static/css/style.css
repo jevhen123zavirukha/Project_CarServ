@@ -381,3 +381,22 @@
     padding-right: 0;
     border-right: none;
 }
+
+.alert-container {
+    margin: 20px 0;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+}
+
+.alert-error {
+    background-color: #f44336;
+}

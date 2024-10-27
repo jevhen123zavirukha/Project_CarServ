@@ -42,6 +42,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.iml
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -255,6 +256,8 @@ fabric.properties
 # that are supposed to be shared within teams.
 
 .idea/*
+
+.idea/
 
 !.idea/codeStyles
 !.idea/runConfigurations

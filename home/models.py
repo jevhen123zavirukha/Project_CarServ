@@ -8,6 +8,11 @@ class Establishment(models.Model):
     phone = models.CharField(max_length=20)
     email = models.EmailField()
     website = models.URLField(blank=True, null=True)
+    years_experience = models.CharField(max_length=20)
+    expert_technicians = models.CharField(max_length=20)
+    satisfies_clients = models.CharField(max_length=20)
+    compleate_projects = models.CharField(max_length=20)
+
     is_visible = models.BooleanField(default=True)
 
     def __str__(self):
@@ -15,17 +20,3 @@ class Establishment(models.Model):
 
     class Meta:
         verbose_name_plural = 'Establishments'
-
-
-# class CustomerReview(models.Model):
-#     establishment = models.ForeignKey(Establishment, on_delete=models.CASCADE)
-#     customer_name = models.CharField(max_length=100)
-#     rating = models.PositiveSmallIntegerField()
-#     comment = models.TextField()
-#     created_at = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return f'{self.customer_name} - {self.rating}'
-#
-#     class Meta:
-#         verbose_name_plural = 'Customer Reviews'
